@@ -11,6 +11,7 @@ public class Person implements Comparable<Person> {
     private int height;
     private float weight;
 
+
     public Person(String firstName, String lastName, String gender, int height, float weight) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -61,19 +62,18 @@ public class Person implements Comparable<Person> {
 
     @Override
     public String toString() {
-        return "Person < " +
-                "First Name: " + firstName + ' ' +
-                "Last Name: " + lastName  + ' ' +
-                "Gender: " + gender  + ' ' +
-                "Height: " + height + ' ' +
-                "Weight: " + weight + ' ' +
-                " >" + " " ;
+        return "Person Objects:" + "\n" +
+                "--------------" + "\n" +
+                "First Name: " + firstName + "\n" +
+                "Last Name: " + lastName  + "\n" +
+                "Gender: " + gender  + "\n" +
+                "Height: " + height + "\n" +
+                "Weight: " + weight + "\n" +
+                "--------------"  + "\n" ;
     }
 
     @Override
     public int compareTo(Person other) {
-        String thisWeight = (String.valueOf(this.weight));
-        String otherWeight = (String.valueOf(other.weight));
-        return thisWeight.compareTo(otherWeight);
+        return this.lastName.compareTo(other.lastName);
     }
 }
